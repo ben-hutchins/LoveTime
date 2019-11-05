@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="start">Start the love</a></li>
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="question1">Question 1</a></li>
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link">Question 2</li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Question 2 of 2</span>
+    <h1 class="govuk-heading-xl">Important question, and we need answers!</h1>
+
+    <form class="form" action="check-your-answers" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h2 class="govuk-heading-l">Where is the love?</h2>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-is-the-love-1" name="where-is-the-love" type="radio" value="in the bathroom">
+              <label class="govuk-label govuk-radios__label" for="where-is-the-love-1">
+                in the bathroom
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-is-the-love-2" name="where-is-the-love" type="radio" value="in the kitchen">
+              <label class="govuk-label govuk-radios__label" for="where-is-the-love-2">
+                in the kitchen
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-is-the-love-3" name="where-is-the-love" type="radio" value="in the bedroom">
+              <label class="govuk-label govuk-radios__label" for="where-is-the-love-3">
+                in the bedroom
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-is-the-love-4" name="where-is-the-love" type="radio" value="in the garden shed">
+              <label class="govuk-label govuk-radios__label" for="where-is-the-love-4">
+                in the garden shed
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+  {% endblock %}
